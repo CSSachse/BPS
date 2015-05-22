@@ -20,21 +20,25 @@ color:rgb(180,150,30);
 box-shadow:0px 3px 4px #888888;
 height:130px;
 width:100%;
+background-color:white;
 }
 #contentstuff{
 padding-top:5px;
 padding-left:5%;
 padding-right:5%;
 }
+body{
+background-color:#AAAAAA;
+}
 </style>
 </head>
 <body>
 <div id="header">
 	<img src="resources/logo_small.png" height="130"/>
-	<div style="position:fixed;right:5px;top:5px;text-align:right;color:black;"><!--Stuff on right hand side-->
-		954-202-9898<br/>
-		some place on that one road<br/>
-		Facebook! Email! pinterest? us... yay for sokel mediums
+	<div style=" position:absolute;right:5px;top:5px;text-align:right;"><!--Stuff on right hand side-->
+		<span style="">954-202-9898<br/></span>
+		<span style="color:black">2818, East Oakland Park Blvd. Ft. Lauderdale<br/>
+		Facebook! Email! pinterest? us... yay for sokel mediums</span>
 	</div>
 </div>
 <div id="contentstuff">
@@ -54,7 +58,18 @@ padding-right:5%;
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
-        <li><a href="#">About us</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Dr. Rainer Sachse, MD FACS</a></li>
+            <li><a href="#">Martina Fici, Cosmetician</a></li>
+            <li><a href="#">Our Staff</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Procedures<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -85,13 +100,12 @@ padding-right:5%;
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>   
     <!-- Carousel items -->
     <div class="carousel-inner">
-        <div class="item active">
+        <div class="item active"style="text-align:center;">
             <img src="resources/fake_promotion.png"/>
-            <div class="carousel-caption">
+            <div class="carousel-caption" style="color:black;">
               <h3>First slide label</h3>
               <p>Lorem ipsum dolor sit amet consectetur…</p>
             </div>
