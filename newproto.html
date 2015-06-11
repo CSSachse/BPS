@@ -18,17 +18,16 @@ padding:0px;
 padding-left:30px;
 color:rgb(180,150,30);
 box-shadow:0px 3px 4px #888888;
-height:130px;
+height:135px;
 width:100%;
 background-color:white;
+font-family:"Times New Roman", Times, serif;
+font-size:20px;
+z-index:25;
 }
-#contentstuff{
-padding-top:5px;
-padding-left:5%;
-padding-right:5%;
-}
+
 body{
-background-color:#AAAAAA;
+background-color:white;
 }
 </style>
 </head>
@@ -36,85 +35,39 @@ background-color:#AAAAAA;
 <div id="header">
 	<img src="resources/logo_small.png" height="130"/>
 	<div style=" position:absolute;right:5px;top:5px;text-align:right;"><!--Stuff on right hand side-->
-		<span style="">954-202-9898<br/></span>
-		<span style="color:black">2818, East Oakland Park Blvd. Ft. Lauderdale<br/>
-		Facebook! Email! pinterest? us... yay for sokel mediums</span>
+		<p style="font-size:30px">954-202-9898</p>
+		<p style="color:black">2818, East Oakland Park Blvd. Ft. Lauderdale</p>
+		<a href="https://www.facebook.com/pages/Broward-Plastic-Surgery-PA-Rainer-Sachse-MD-FACS/511930418902673?fref=ts"><img src="resources/facebook.png"/></a>
+		<a href="http://www.plus.google.com"><img src="resources/googleplus.png"/></a>
+		<a href="browardplasticsurgery@gmail.com"><img src="resources/mail.png"/></a>
+		<a href="https://www.linkedin.com/pub/rainer-sachse-md-facs/77/8aa/606"><img src="resources/linkedin.png"/></a>
 	</div>
 </div>
-<div id="contentstuff">
-<nav class="navbar navbar-default"style="position:inline">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About<span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Dr. Rainer Sachse, MD FACS</a></li>
-            <li><a href="#">Martina Fici, Cosmetician</a></li>
-            <li><a href="#">Our Staff</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Procedures<span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <!--This held empty for yolo-->
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top:5px;background-image: url(incomplete/orchid_blackgold_noresize.png);background-size:50%;background-repeat:no-repeat;">
     <!-- Carousel indicators -->
     <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="0" class="active""></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
     </ol>   
     <!-- Carousel items -->
-    <div class="carousel-inner">
+    <div class="carousel-inner" style="height:430px">
         <div class="item active"style="text-align:center;">
-            <img src="resources/fake_promotion.png"/>
+            <!--<img src="resources/fake_promotion.png" style="float:right"/>-->
+			<h1><a href="about/index.html#RainerSachse">Meet Dr. Sachse</a></h1>
+			<p style="width:200px;position:absolute;right:410px">With over 85 years of experience in plastic surgery (wait how old r u?), Dr. Sachse is one of the leading cosmetic and reconstructive surgeons in South Florida.</p>
+			<img style="position:absolute;top:30px;right:200px;" src="resources/drsachse.jpg"/>
             <div class="carousel-caption" style="color:black;">
-              <h3>First slide label</h3>
-              <p>Lorem ipsum dolor sit amet consectetur…</p>
+              <!--<h3>Did you know.....</h3>
+              <p>Plastic surgery is the best thing that will ever happen to you</p>-->
             </div>
         </div>
         <div class="item">
-            <h2>Slide 2</h2>
+			<!--<img src="resources/fake_promotion2.png" style="float:right"/>-->
             <div class="carousel-caption">
-              <h3>Second slide</h3>
-              <p>Aliquam sit amet gravida nibh, facilisis gravida…</p>
+              <h3>For men as well</h3>
+              <p>Please ignore this cynical advertisement, we actually want you to visit us</p>
             </div>
         </div>
     </div>
@@ -127,10 +80,53 @@ background-color:#AAAAAA;
     </a>
 </div>
 
-<p>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-</p>
-</div>
+
+<nav class="navbar navbar-default"style="margin-bottom:0px;">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style=>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Dr. Rainer Sachse, MD FACS</a></li>
+            <li><a href="#">Martina Fici, Cosmetician</a></li>
+            <li><a href="#">Our Staff</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Office</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Philosophy</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Procedures<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Injections</a></li>
+          </ul>
+        </li>
+		<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">For men<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Injections</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+	  <li><a href="#">Contact</a></li>
+        <!--This held empty for yolo-->
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 </body>
