@@ -1,83 +1,208 @@
 <!DOCTYPE HTML>
+<!-- Copyright Christoph Sachse June 2015. All rights reserved -->
 <html>
 <head>
 <title>Broward Plastic Surgery</title>
+
+<!--links; technical shit-->
+<!--Font:open sans-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+<!--metas-->
+<meta name="Description" content="Dr. Sachse - Broward Plastic Surgery" />
+<meta name="Keywords" content="Broward plastic surgery, cosmetic surgeon, cosmetic surgery, dr sachse, florida plastic surgery, 	" />
+<meta name="copyright" content="" />
+<meta name="robots" content="index, follow" />
+<meta name="revisit-after" content="14 days" />
+<meta name="rating" content="general" />
+<meta http-equiv="Expires" content="0" />
+<meta name="distribution" content="global" />
+<meta name="verify-v1" content="SjN/+N+1dvovBYnaOFvCHIT3Hpt5o97e0Xv0xcZ+pH0=" />
+
+<!--back to normal stuff-->
 <style type="text/CSS">
+body{
+	overflow:hidden;
+}
 div{
-padding:0px;
+	padding:0px;
 }
 #header{
-position:absolute;
-top:0px;
-left:0px;
-width:100%;
-height:135px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:135px;
+	box-shadow:0px 3px 4px #888888;
+	font-family: 'Open Sans Condensed', Arial, sans-serif;
+	background-color:white;
 }
 #menu{
-font-family:"Helvetica", Arial, sans-serif; 
-font-size:20px;
-
-
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	height:50px;
+	box-shadow:0px -3px 4px #888888;
+	font-family: 'Open Sans Condensed', Arial, sans-serif;
+	font-size:25px;
+	background: -webkit-linear-gradient(#888888, #333333); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#888888, #333333); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#888888,#333333); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#888888,#333333); /* Standard syntax */
 }
-#
+.menuoption{
+	display:inline;
+	position:relative;
+	top:6px;
+	color:rgb(25,25,25);
+	margin:0px;
+	padding:15px;
+	text-align:center;
+}
+.menuoption a:link{
+	text-decoration:none;
+}
+.menuoption a:visited{
+	color:rgb(25,25,25);
+	text-decoration:none;
+}
+.menuoption a:hover{
+	color:rgb(250,215,30);
+	text-decoration:none;
+}
+.menuoption a:active{
+	color:rgb(250,215,30);
+	text-decoration:none;
+}
+.menuoption.active a{
+	color:rgb(250,215,30);
+}
+.social{
+	position:absolute;
+	left:700px;
+	top:60px;
+}
+.cur_underliner{
+	position:absolute;
+	left:0px;
+	top:10px;
+	height:4px;
+	width:100%;
+	background-color:rgb(250,215,30);
+}
+.menuoptional{
+	position:absolute;
+	bottom:57px;
+	left:0px;
+	height:30px;
+	width:100%;
+	background:linear-gradient(rgb(230,195,10),rgb(250,215,30));
+	visibility:hidden;
+	font-family: 'Open Sans Condensed', Arial, Helvetica, sans-serif;
+	font-size:14px;
+	text-align:center;
+}
+.menuoptional a{
+	position:relative;
+	top:6px;
+	color:black;
+	text-decoration:none;
+	padding:20px;
+}
 </style>
 <script type="text/javascript">
+//ensure page dimensions fit the screen and look nice, etc.
 function initpage(){
-//get dimensions for later calculations
-scrwidth = window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;
-scrheight = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
-
+	//get dimensions for later calculations
+	scrwidth = window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;
+	scrheight = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
 }
+
+//show selection display
+function sdisplay(i){
+	for(j=0;j<i;j++){
+		document.getElementById("subdisp"+j).style.visibility="hidden";
+	}
+	for(j=i+1;j<=5;j++){
+		document.getElementById("subdisp"+j).style.visibility="hidden";
+	}
+	document.getElementById('subdisp'+i).style.visibility="visible";
+} 
 
 </script>
 </head>
 <body onload="initpage()">
 <div id="header">
-
-
+	<img src="resources/logo_cursive.png" height="130" style="position:relative; left:3px;top:3px;"/>
+		<span style="position:absolute;left:350px;top:15px;font-size:40px">954 202 9898</span>
+		<span style="position:absolute;left:350px;top:70px;font-size:20px;">2818, East Oakland Park Blvd. Ft. Lauderdale</span>
+		<div class="social">
+			<a href="https://www.facebook.com/pages/Broward-Plastic-Surgery-PA-Rainer-Sachse-MD-FACS/511930418902673?fref=ts"><img src="resources/facebook.png"/></a>
+			<a href="http://www.plus.google.com"><img src="resources/googleplus.png"/></a>
+			<a href="mailto:Browardplastics@bellsouth.net?Subject=Hello%20there"><img src="resources/mail.png"/></a>
+			<a href="https://www.linkedin.com/pub/rainer-sachse-md-facs/77/8aa/606"><img src="resources/linkedin.png"/></a>
+		</div>
 </div>
 
 <div id="main">
-
+	<img src="resources/pro_img_1.jpg" style="float:right;position:relative;top:125px;z-index:-3;"/>
 
 </div>
 
 <div id="menu">
-<div class="menuoption selected">
+	<div class="menuoption">
+	</div>
+	<div class="menuoption active" onmouseover="sdisplay(0);">
+		<a href="#">Home</a>
+		<div class="cur_underliner"></div>
+	</div>
+	<div class="menuoption" onmouseover="sdisplay(1);">
+		<a href="#">About us</a>
+	</div>
+	<div class="menuoption" onmouseover="sdisplay(2);">
+		<a href="#">Procedures</a>
+	</div>
+	<div class="menuoption" onmouseover="sdisplay(3);">
+		<a href="#">Non-Surgical</a>
+	</div>
+	<div class="menuoption" onmouseover="sdisplay(4);">
+		<a href="#">Photos & Testimonials</a>
+	</div>
+	<div class="menuoption" onmouseover="sdisplay(5);">
+		<a href="#">Contact Us!</a>
+	</div>
+</div>
 
+<div id="subdisp0" class="menuoptional" style="visibility:visible;"></div>
+<div id="subdisp1" class="menuoptional"><!-- -->
+	<a href="">Dr. Sachse, MD FACS</a>
+	<a href="">Martina Fici, cosmetician</a>
+	<a href="">Our staff</a>
+	<a href="">Office & Facilities</a>
 </div>
-<div class="menuoption">
+<div id="subdisp2" class="menuoptional"><!-- -->
+	<a href="">Abdominoplasty</a>
+	<a href="">Blepharoplasty</a>
+	<a href="">Breast augmentation</a>
+	<a href="">Breast reduction</a>
+	<a href="">Breast lift</a>
+	<a href="">Brachioplasty</a>
+	<a href="">Mohs surgery</a>
+	<a href="">Face lift</a>
+	<a href="">Liposuction</a>
+	<a href="">Otoplasty</a>
+	<a href="">Rhinoplasty</a>
+</div>
+<div id="subdisp3" class="menuoptional"><!-- -->
+	<a href=""></a>
+</div>
+<div id="subdisp4" class="menuoptional"><!-- -->
+	
+</div>
+<div id="subdisp5" class="menuoptional"><!-- -->
+	
+</div>
 
-</div>
-<div class="menuoption">
-
-</div>
-
-</div>
-
-<div id="menu-optional"><!-- -->
-	
-</div>
-<div id="menu-optional"><!-- -->
-	
-</div>
-<div id="menu-optional"><!-- -->
-	
-</div>
-<div id="menu-optional"><!-- -->
-	
-</div>
-<div id="menu-optional"><!-- -->
-	
-</div>
-<div id="menu-optional"><!-- -->
-	
-</div>
-<div id="menu-optional"><!-- -->
-	
-</div>
-<div id="menu-optional"><!-- -->
-	
-</div>
 </body>
 </html>
