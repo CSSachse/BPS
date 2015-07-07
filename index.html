@@ -1,135 +1,305 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0020)http://drsachse.com/ -->
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/blankpage.dwt.php" codeOutsideHTMLIsLocked="false" --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<!-- InstanceBeginEditable name="doctitle" -->
+<!DOCTYPE HTML>
+<!-- Copyright Christoph Sachse June 2015. All rights reserved -->
+<html>
+<head>
 <title>Broward Plastic Surgery</title>
-<meta name="Description" content="Dr. Sachse - Broward Plastic Surgery">
-<meta name="Keywords" content="Broward plastic surgery, cosmetic surgeon, cosmetic surgery, dr sachse, florida plastic surgery, 	">
-<meta name="copyright" content="">
-<meta name="robots" content="index, follow">
-<meta name="revisit-after" content="14 days">
-<meta name="rating" content="general">
-<meta http-equiv="Expires" content="0">
-<meta name="distribution" content="global">
-<meta name="verify-v1" content="SjN/+N+1dvovBYnaOFvCHIT3Hpt5o97e0Xv0xcZ+pH0=">
 
+<!--links; technical shit-->
+<!--Font:open sans-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script><script src="./index_files/ga.js" type="text/javascript"></script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-9890706-1");
-pageTracker._trackPageview();
-} catch(err) {}</script>
+<!--Icon-->
+<link rel="icon" type="image/vnd.microsoft.icon" href="resources/favicon.ico" />
 
-<!-- InstanceEndEditable -->
+<!--metas-->
+<meta name="Description" content="Dr. Sachse - Broward Plastic Surgery" />
+<meta name="Keywords" content="Broward plastic surgery, cosmetic surgeon, cosmetic surgery, dr sachse, florida plastic surgery, 	" />
+<meta name="copyright" content="" />
+<meta name="robots" content="index, follow" />
+<meta name="revisit-after" content="14 days" />
+<meta name="rating" content="general" />
+<meta http-equiv="Expires" content="0" />
+<meta name="distribution" content="global" />
+<meta name="verify-v1" content="SjN/+N+1dvovBYnaOFvCHIT3Hpt5o97e0Xv0xcZ+pH0=" />
 
-<link href="./index_files/Master.css" rel="stylesheet" type="text/css">
-
-<style type="text/css">
-<!--
-.style1 {
-	color: #FFFFFF;
-	font-family: "Century Gothic", Arial, Helvetica, "Lucida Sans";
-	font-size: 24px;
+<!--back to normal stuff-->
+<style type="text/CSS">
+body{
+	overflow:hidden;
 }
--->
+div{
+	padding:0px;
+}
+#header{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:135px;
+	box-shadow:0px 3px 4px #888888;
+	font-family: 'Open Sans Condensed', Arial, sans-serif;
+	background-color:white;
+}
+#menu{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	height:50px;
+	box-shadow:0px -3px 4px #888888;
+	font-family: 'Open Sans Condensed', Arial, sans-serif;
+	font-size:25px;
+	background-color:#333333;
+	background: -webkit-linear-gradient(#888888, #333333); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#888888, #333333); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#888888,#333333); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#888888,#333333); /* Standard syntax */
+}
+.menuoption{
+	display:inline;
+	position:relative;
+	top:6px;
+	color:rgb(25,25,25);
+	margin:0px;
+	padding:15px;
+	text-align:center;
+}
+.menuoption a:link{
+	color:rgb(25,25,25);
+	text-decoration:none;
+}
+.menuoption a:visited{
+	color:rgb(25,25,25);
+	text-decoration:none;
+}
+.menuoption a:hover{
+	color:rgb(250,215,30);
+	text-decoration:none;
+}
+.menuoption a:active{
+	color:rgb(250,215,30);
+	text-decoration:none;
+}
+.menuoption.active a{
+	color:rgb(250,215,30);
+}
+.social{
+	position:absolute;
+	left:700px;
+	bottom:20px;
+}
+
+.social img{
+	height:45px;
+	position:relative;
+	top:0px;
+}
+.social img:hover{
+	height:60px;
+	margin-right:-8px;
+	margin-left:-7px;
+	top:8px;
+	z-index:3;
+}
+.cur_underliner{
+	position:absolute;
+	left:0px;
+	top:10px;
+	height:4px;
+	width:100%;
+	background-color:rgb(250,215,30);
+}
+.menuoptional{
+	position:absolute;
+	bottom:57px;
+	left:0px;
+	height:30px;
+	width:100%;
+	backgroun-color:rgb(250,215,30);
+	background: -webkit-linear-gradient(rgb(230,195,10),rgb(250,215,30)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(rgb(230,195,10),rgb(250,215,30)); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(rgb(230,195,10),rgb(250,215,30)); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(rgb(230,195,10),rgb(250,215,30)); /* Standard syntax */
+	visibility:hidden;
+	font-family: 'Open Sans Condensed', Arial, Helvetica, sans-serif;
+	font-size:16px;
+	text-align:center;
+}
+.menuoptional a{
+	position:relative;
+	top:4px;
+	color:black;
+	text-decoration:none;
+	padding:20px;
+}
+
+.maidisp{
+	position:absolute;
+	left:0px;
+	top:125px;
+	width:100%;
+	visibility:hidden;
+	z-index:-3;
+}
+
+.selcircles{
+	position:absolute;
+	left:0px;
+	width:100%;
+	bottom:100px;
+	height:30px;
+	text-align:center;
+}
+.selcircles div{
+	display:inline-block;
+	height:20px;
+	margin:5px;
+	height:20px;
+	width:20px;
+	background-image:url("resources/circle_inactive.png");
+}
+.selcircles div.active{
+	background-image:url("resources/circle_active.png");
+}
 </style>
-<!-- InstanceParam name="OptionalRegion1" type="boolean" value="true" -->
-<!-- InstanceBeginEditable name="head" -->
-<style type="text/css">
-<!--
-.style2 {color: #E5218D}
--->
-</style>
-<!-- InstanceEndEditable -->
-<link href="./index_files/menu.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+
+var curmai=0;
+var num_slides=4;
+var repter;
+//ensure page dimensions fit the screen and look nice, begins main scroller, etc.
+function initpage(){
+	//get dimensions for later calculations
+	scrwidth = window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;
+	scrheight = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
+	
+	
+	repter=setTimeout("curmai=(curmai+1)%4;mupdate();",4000);
+}
+
+//show selection display
+function sdisplay(i){
+	//IF format is changed away from a towards just divs, should animate class change here as well
+	for(j=0;j<i;j++){
+		document.getElementById("subdisp"+j).style.visibility="hidden";
+	}
+	for(j=i+1;j<=5;j++){
+		document.getElementById("subdisp"+j).style.visibility="hidden";
+	}
+	document.getElementById('subdisp'+i).style.visibility="visible";
+} 
+
+//show new slide in main/mai thingy
+function mupdate(){
+	//Temporary fix. Will ultimately add animation (fade or slide) once I can figure out how that works
+	for(j=0;j<curmai;j++){
+		document.getElementById("maidisp"+j).style.visibility="hidden";
+		document.getElementById("msel"+j).className="";
+	}
+	for(j=curmai+1;j<num_slides;j++){
+		document.getElementById("maidisp"+j).style.visibility="hidden";
+		document.getElementById("msel"+j).className="";
+	}
+	document.getElementById('maidisp'+curmai).style.visibility="visible";
+	document.getElementById("msel"+curmai).className="active";
+	curmai=(curmai+1)%4;
+	clearTimeout(repter);
+	repter=self.setTimeout("mupdate();",4000);
+}
+
+
+
+</script>
 </head>
-
-<body>
-<div id="container">
-	<div id="header"></div>
-	<div id="content_bg">
-		<div id="content">
-            <div id="pink_nav">
-                <div id="menu1">
-					<ul>
-					<li><a href="http://drsachse.com/index.php" title="Home">Home</a></li>
-					<li><a href="http://drsachse.com/about.php" title="About Dr. Sachse">About Dr. Sachse</a></li>
-					<li><a href="http://drsachse.com/thoughts.php" title="Our Thoughts">Our Thoughts</a></li>
-					<li><a href="http://drsachse.com/questions.php" title="Questions to Ask">Questions to Ask</a></li>
-					<li><a href="http://drsachse.com/procedures.php" title="Procedures Offered">Procedures Offered</a></li>	
-                    <li><a href="http://drsachse.com/cosmetic_surgery.php" title="Surgery for Men">Surgery for Men</a></li>
-                    <li><a href="http://drsachse.com/video_testimonials.php" title="Video Testimonials">Video Testimonials</a></li>
-					<li><a href="http://drsachse.com/before_after_care.php" title="Before &amp; After Care">Before &amp; After Care</a></li>
-                    <li><a href="http://drsachse.com/aesthetics.php" title="Aesthetics">Aesthetics</a></li>
-					<li><a href="http://drsachse.com/staff.php" title="Our Staff">Our Staff</a></li>		
-                    <li><a href="http://drsachse.com/contact.php">Contact Us</a></li>
-  </ul>
-			  </div>
-                <div id="greencontainer">
-                    <div id="leftimage"></div>
-                    <div id="menu2">
-                        <p>&nbsp;</p>
-           		 <p align="center" class="style1">Procedures</p>
-  					<ul>
-					<li><a href="http://drsachse.com/abdominoplasty.php" title="Abdominoplasy">Abdominoplasty</a></li>
-					<li><a href="http://drsachse.com/blepharoplasty.php" title="Blepharoplasty">Blepharoplasty</a></li>
-					<li><a href="http://drsachse.com/breast_augmentation.php" title="Breast Augmentation">Breast Augmentation</a></li>
-					<li><a href="http://drsachse.com/breast_reduction.php" title="Breast Reduction">Breast Reduction</a></li>
-                    <li><a href="http://drsachse.com/reconstruction.php" title="Breast Lift">Breast Lift</a></li>
-					<li><a href="http://drsachse.com/brachioplasty.php" title="Brachioplasty">Brachioplasty</a></li>	
-                    <li><a href="http://drsachse.com/mohs_surgery.php" title="Mohs Surgery">Mohs Surgery</a></li>
-					<li><a href="http://drsachse.com/face-lift-guide.php" title="Face lift">Face Lift</a></li>
-					<li><a href="http://drsachse.com/liposuction.php" title="Liposuction">Liposuction</a></li>
-                    <li><a href="http://drsachse.com/otoplasty.php" title="Octoplasty">Otoplasty</a></li>
-					<li><a href="http://drsachse.com/rhinoplasty.php" title="Link 5">Rhinoplasty</a></li>		
-</ul>
-                    </div>
-                    <div id="righttimage">
-                    </div>
-                </div>
-            </div>
-            <div id="rightwrapper"><!-- InstanceBeginEditable name="EditRegion1" -->
-            <div class="padded_text_40">
-              <table width="313" height="129" border="0" align="right" cellpadding="0">
-  <tbody><tr>
-    <td align="center"><p><a href="http://www.drsachse.com/face-lift-guide.php"><img src="./index_files/Combovipeel2.jpg" alt="Face lift" width="265" height="444" border="0" align="middle"></a></p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p><a href="http://www.drsachse.com/tummy-tuck-guide.php"><img src="./index_files/SculptraDrSachse.jpg" width="265" height="136" alt="Sculptra"></a></p>
-      <p>&nbsp;</p></td>
-  </tr>
-  <tr>
-    <td align="center">&nbsp;</td>
-  </tr>
-</tbody></table>
-
-              <div id="rightcontent"><!--right content-->
-			  	<div id="myleftimage"></div>
-                <div id="pinkblock">
-                   <br>
-                  <h1>Welcome</h1><br>
-                  <p>Broward  Plastic Surgery is a facility dedicated to providing patients with the highest  quality medical and personal care in the realms of facial and body  improvements. Each aspect of patient care from the first consultation to the  last visit receives the same careful consideration. Rainer Sachse, MD, FACS, a  board certified Plastic and Reconstructive surgeon leads the institute.</p>
-                  <p>&nbsp;</p>
-                  <p>Once  you've browsed our site, feel free to contact our office directly for more  information. We can be reached at 954.202.9898, and our office hours are 9-5,  Monday thru Friday.</p>
-                  <p>&nbsp;</p>
-                  <p>Our  hospital affiliations include Holy Cross, Imperial Point Medical Center,  Broward General Medical Center, North Broward Medical Center, and the Surgery  Center of Ft. Lauderdale.</p>
-                </div>
-              <div id="myrightimage"></div>
-            
-  	      	</div><!--end of right content-->
-            </div><!-- end of padded-->
-            <!-- InstanceEndEditable --></div>
-        <div class="clearFix"></div>  
-        </div>
-        <div id="footer">Broward Plastic Surgery | 4390 N. Federal Hwy, suite 104, Ft Lauderdale, FL 33308 | Phone 954.202.9898</div>
-  </div>
+<body onload="initpage()">
+<div id="header">
+	<img src="resources/logo_cursive.png" height="130" style="position:relative; left:3px;top:3px;"/>
+		<span style="position:absolute;left:350px;top:15px;font-size:40px">954 202 9898</span>
+		<span style="position:absolute;left:350px;top:80px;font-size:20px;"><a href="findus.html" style="color:black;text-decoration:none;">2818 East Oakland Park Blvd. Ft. Lauderdale</a> </span>
+		<div class="social">
+			<a href="https://www.facebook.com/pages/Broward-Plastic-Surgery-PA-Rainer-Sachse-MD-FACS/511930418902673?fref=ts"><img src="resources/facebook.png" title="Facebook"/></a>
+			<a href="http://www.plus.google.com"><img src="resources/googleplus.png" title="G+"/></a>
+			<a href="mailto:Browardplastics@bellsouth.net?Subject=Hello%20there"><img src="resources/mail.png" title="Email"/></a>
+			<a href="https://www.linkedin.com/pub/rainer-sachse-md-facs/77/8aa/606"><img src="resources/linkedin.png" title="LinkedIn"/></a>
+		</div>
 </div>
 
-<!-- InstanceEnd -->
-</body></html>
+<div id="main">
+	<!--selection of slides which can take up main screen-->
+	<div id="maidisp0" class="maidisp" style="visibility:visible;">
+		<img src="resources/pro_img_1.jpg" style="float:right;z-index:-3;"/>
+	</div>
+	<div id="maidisp1" class="maidisp">
+		<img src="resources/pro_img_1.jpg" style="float:right;z-index:-3;"/>
+	</div>
+	<div id="maidisp2" class="maidisp">
+		<img src="resources/pro_img_1.jpg" style="float:right;z-index:-3;"/>
+	</div>
+	<div id="maidisp3" class="maidisp">
+		<img src="resources/pro_img_1.jpg" style="float:right;z-index:-3;"/>
+	</div>
+	<!--selection circles to choose current slide-->
+	<div class="selcircles">
+		<div id="msel0" onclick="curmai=0;mupdate();"class="active"> </div>
+		<div id="msel1" onclick="curmai=1;mupdate();"> </div>
+		<div id="msel2" onclick="curmai=2;mupdate();"> </div>
+		<div id="msel3" onclick="curmai=3;mupdate();"> </div>
+	</div>
+</div>
+
+<div id="menu">
+	<div class="menuoption">
+	</div>
+	<div class="menuoption active" onmouseover="sdisplay(0);">
+		<a href="#">Home</a>
+		<div class="cur_underliner"></div>
+	</div>
+	<div class="menuoption" onmouseover="sdisplay(1);">
+		<a href="#">About us</a>
+	</div>
+	<div class="menuoption" onmouseover="sdisplay(2);">
+		<a href="#">Procedures</a>
+	</div>
+	<div class="menuoption" onmouseover="sdisplay(3);">
+		<a href="#">Non-Surgical</a>
+	</div>
+	<div class="menuoption" onmouseover="sdisplay(4);">
+		<a href="#">Photos & Testimonials</a>
+	</div>
+	<div class="menuoption" onmouseover="sdisplay(5);">
+		<a href="#">Contact Us!</a>
+	</div>
+</div>
+
+<div id="subdisp0" class="menuoptional" style="visibility:visible;"></div>
+<div id="subdisp1" class="menuoptional"><!-- -->
+	<a href="">Dr. Sachse, MD FACS</a>
+	<a href="">Martina Fici, cosmetician</a>
+	<a href="">Our staff</a>
+	<a href="">Office & Facilities</a>
+</div>
+<div id="subdisp2" class="menuoptional"><!-- -->
+	<a href="">Abdominoplasty</a>
+	<a href="">Blepharoplasty</a>
+	<a href="">Breast augmentation</a>
+	<a href="">Breast reduction</a>
+	<a href="">Breast lift</a>
+	<a href="">Brachioplasty</a>
+	<a href="">Mohs surgery</a>
+	<a href="">Face lift</a>
+	<a href="">Liposuction</a>
+	<a href="">Otoplasty</a>
+	<a href="">Rhinoplasty</a>
+</div>
+<div id="subdisp3" class="menuoptional"><!-- -->
+	<a href=""></a>
+</div>
+<div id="subdisp4" class="menuoptional"><!-- -->
+	
+</div>
+<div id="subdisp5" class="menuoptional"><!-- -->
+	
+</div>
+
+</body>
+</html>
