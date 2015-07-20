@@ -5,7 +5,8 @@
 <title>Broward Plastic Surgery</title>
 
 <!--links; technical shit-->
-<!--Font:open sans-->
+<!--Font:open sans+open sans condensed-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 <!--Site-wide stylesheet for convenience and cacheing-->
 <link rel="stylesheet" type="text/css" href="stylesheetmain.css"/>
@@ -32,6 +33,17 @@
 .menuoptional{
 	top:185px;
 }
+#main{
+	padding:0px;
+	margin:0px;
+	position:absolute;
+	top: 215px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background:linear-gradient(90deg,#555555,#aaaaaa,#555555);
+	background-color:#666666;
+}
 </style>
 <script type="text/javascript">
 
@@ -55,11 +67,6 @@ function sdisplay(i){
 	}
 	document.getElementById('subdisp'+i).style.visibility="visible";
 } 
-
-
-
-
-
 </script>
 </head>
 <body onload="initpage()">
@@ -76,22 +83,11 @@ function sdisplay(i){
 </div>
 
 <div id="main">
-	<table style="width:100%" >
-		<tr style="width:100%">
-			<td class="mdec left">a</td>
-			<td style="width:>
-			<!-- CONTENT HERE-->
-			
-			
-			
-			
-			
-			
-			
-			</td>
-			<td class="mdec right">a</td>
-		</tr>
-	</table>
+	<div id="centerdisp">
+		<h1>yo dawg</h1>
+		hey yo look ad tis cool wobsite i makesd<br/>
+		it hez lotsa cool features and shit
+	</div>
 </div>
 
 <div id="menu">
@@ -125,7 +121,7 @@ function sdisplay(i){
 	<span class="pseudolink" onclick="window.location.href='';">Our staff</span>
 	<span class="pseudolink" onclick="window.location.href='';">Office & Facilities</span>
 </div>
-<div id="subdisp2" class="menuoptional"><!--Probably will have to filter this to account for smaller screents, add a "more-> section"-->
+<div id="subdisp2" class="menuoptional"><!--Probably will have to filter this to account for smaller screens, add a "more-> section"-->
 	<span class="pseudolink" onclick="window.location.href='';">Abdominoplasty</span>
 	<span class="pseudolink" onclick="window.location.href='';">Blepharoplasty</span>
 	<span class="pseudolink" onclick="window.location.href='';">Breast augmentation</span>

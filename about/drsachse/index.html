@@ -28,14 +28,23 @@
 <!--back to normal stuff-->
 <style type="text/CSS">
 #menu{
-	box-shadow:0px -3px 4px #888888;/*only on main page*/
+	top:135px;
+}
+.menuoptional{
+	top:185px;
+}
+#main{
+	padding:0px;
+	margin:0px;
+	position:absolute;
+	top: 215px;
+	left:0px;
+	width:100%;
+	height:30px;
 }
 </style>
 <script type="text/javascript">
 
-var curmai=0;
-var num_slides=4;
-var repter;
 //ensure page dimensions fit the screen and look nice, begins main scroller, etc.
 function initpage(){
 	//get dimensions for later calculations
@@ -43,7 +52,6 @@ function initpage(){
 	scrheight = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
 	
 	
-	repter=setTimeout("curmai=(curmai+1)%4;mupdate();",4000);
 }
 
 //show selection display
@@ -58,23 +66,7 @@ function sdisplay(i){
 	document.getElementById('subdisp'+i).style.visibility="visible";
 } 
 
-//show new slide in main/mai thingy
-function mupdate(){
-	//Temporary fix. Will ultimately add animation (fade or slide) once I can figure out how that works
-	for(j=0;j<curmai;j++){
-		document.getElementById("maidisp"+j).style.visibility="hidden";
-		document.getElementById("msel"+j).className="";
-	}
-	for(j=curmai+1;j<num_slides;j++){
-		document.getElementById("maidisp"+j).style.visibility="hidden";
-		document.getElementById("msel"+j).className="";
-	}
-	document.getElementById('maidisp'+curmai).style.visibility="visible";
-	document.getElementById("msel"+curmai).className="active";
-	curmai=(curmai+1)%4;
-	clearTimeout(repter);
-	repter=self.setTimeout("mupdate();",4000);
-}
+
 
 
 
@@ -94,74 +86,70 @@ function mupdate(){
 </div>
 
 <div id="main">
-	<!--selection of slides which can take up main screen-->
-	<div id="maidisp0" class="maidisp" style="visibility:visible;">
-		<img src="resources/pro_img_1.jpg" style="float:right;z-index:-3;"/>
-	</div>
-	<div id="maidisp1" class="maidisp">
-		<img src="resources/pro_img_1.jpg" style="float:right;z-index:-3;"/>
-	</div>
-	<div id="maidisp2" class="maidisp">
-		<img src="resources/pro_img_1.jpg" style="float:right;z-index:-3;"/>
-	</div>
-	<div id="maidisp3" class="maidisp">
-		<img src="resources/pro_img_1.jpg" style="float:right;z-index:-3;"/>
-	</div>
-	<!--selection circles to choose current slide-->
-	<div class="selcircles">
-		<div id="msel0" onclick="curmai=0;mupdate();"class="active"> </div>
-		<div id="msel1" onclick="curmai=1;mupdate();"> </div>
-		<div id="msel2" onclick="curmai=2;mupdate();"> </div>
-		<div id="msel3" onclick="curmai=3;mupdate();"> </div>
-	</div>
+	<table style="width:100%" >
+		<tr style="width:100%">
+			<td class="mdec left">a</td>
+			<td style="width:>
+			<!-- CONTENT HERE-->
+			
+			
+			
+			
+			
+			
+			
+			</td>
+			<td class="mdec right">a</td>
+		</tr>
+	</table>
 </div>
 
 <div id="menu">
 	<div class="menuoption">
 	</div>
-	<div class="menuoption active" onmouseover="sdisplay(0);">
-		<span class="pseudolink" onclick="window.location.href='#';">Home</span>
+	<div class="menuoption" onmouseover="sdisplay(0);">
+		<span class="pseudolink" onclick="window.location.href='#">Home</span>
+	</div>
+	<div class="menuoption active" onmouseover="sdisplay(1);">
+		<span class="pseudolink" onclick="window.location.href='#">About us</span>
 		<div class="cur_underliner"></div>
 	</div>
-	<div class="menuoption" onmouseover="sdisplay(1);">
-		<span class="pseudolink" onclick="window.location.href='#';">About us</span>
-	</div>
 	<div class="menuoption" onmouseover="sdisplay(2);">
-		<span class="pseudolink" onclick="window.location.href='#';">Procedures</span>
+		<span class="pseudolink" onclick="window.location.href='#">Procedures</span>
 	</div>
 	<div class="menuoption" onmouseover="sdisplay(3);">
 		<span class="pseudolink" onclick="window.location.href='#';">Non-Surgical</span>
 	</div>
 	<div class="menuoption" onmouseover="sdisplay(4);">
-		<span class="pseudolink" onclick="window.location.href='#';">Photos & Testimonials</span>
+		<span class="pseudolink" onclick="window.location.href='#">Photos & Testimonials</span>
 	</div>
 	<div class="menuoption" onmouseover="sdisplay(5);">
-		<span class="pseudolink" onclick="window.location.href='#';">Contact Us!</span>
+		<span class="pseudolink" onclick="window.location.href='#">Contact Us!</span>
 	</div>
 </div>
 
 <div id="subdisp0" class="menuoptional" style="visibility:visible;"></div>
 <div id="subdisp1" class="menuoptional"><!-- -->
-	<span class="pseudolink" onclick="window.location.href='blankproto.html';">Dr. Sachse, MD FACS</span>
-	<span class="pseudolink" onclick="window.location.href='blankproto.html';">Martina Fici, cosmetician</span>
-	<span class="pseudolink" onclick="window.location.href='blankproto.html';">Our staff</span>
-	<span class="pseudolink" onclick="window.location.href='blankproto.html';">Office & Facilities</span>
+	<span class="pseudolink" onclick="window.location.href='aboutme.html';">Dr. Sachse, MD FACS</span>
+	<span class="pseudolink" onclick="window.location.href='';">Martina Fici, cosmetician</span>
+	<span class="pseudolink" onclick="window.location.href='';">Our staff</span>
+	<span class="pseudolink" onclick="window.location.href='';">Office & Facilities</span>
 </div>
-<div id="subdisp2" class="menuoptional"><!-- -->
-	<span class="pseudolink" onclick="window.location.href='#';">Abdominoplasty</span>
-	<span class="pseudolink" onclick="window.location.href='#';">Blepharoplasty</span>
-	<span class="pseudolink" onclick="window.location.href='#';">Breast augmentation</span>
-	<span class="pseudolink" onclick="window.location.href='#';">Breast reduction</span>
-	<span class="pseudolink" onclick="window.location.href='#';">Breast lift</span>
-	<span class="pseudolink" onclick="window.location.href='#';">Brachioplasty</span>
-	<span class="pseudolink" onclick="window.location.href='#';">Mohs surgery</span>
-	<span class="pseudolink" onclick="window.location.href='#';">Face lift</span>
-	<span class="pseudolink" onclick="window.location.href='#';">Liposuction</span>
-	<span class="pseudolink" onclick="window.location.href='#';">Otoplasty</span>
-	<span class="pseudolink" onclick="window.location.href='#';">Rhinoplasty</span>
+<div id="subdisp2" class="menuoptional"><!--Probably will have to filter this to account for smaller screents, add a "more-> section"-->
+	<span class="pseudolink" onclick="window.location.href='';">Abdominoplasty</span>
+	<span class="pseudolink" onclick="window.location.href='';">Blepharoplasty</span>
+	<span class="pseudolink" onclick="window.location.href='';">Breast augmentation</span>
+	<span class="pseudolink" onclick="window.location.href='';">Breast reduction</span>
+	<span class="pseudolink" onclick="window.location.href='';">Breast lift</span>
+	<span class="pseudolink" onclick="window.location.href='';">Brachioplasty</span>
+	<span class="pseudolink" onclick="window.location.href='';">Mohs surgery</span>
+	<span class="pseudolink" onclick="window.location.href='';">Face lift</span>
+	<span class="pseudolink" onclick="window.location.href='';">Liposuction</span>
+	<span class="pseudolink" onclick="window.location.href='';">Otoplasty</span>
+	<span class="pseudolink" onclick="window.location.href='';">Rhinoplasty</span>
 </div>
 <div id="subdisp3" class="menuoptional"><!-- -->
-	<span class="pseudolink" onclick="window.location.href='#';"></span>
+	<span class="pseudolink" onclick="window.location.href='';"></span>
 </div>
 <div id="subdisp4" class="menuoptional"><!-- -->
 	

@@ -1,5 +1,7 @@
 body{
 	overflow:hidden;
+	font-family:'Open-Sans', sans-serif;
+	padding:0px;
 }
 div{
 	padding:0px;
@@ -97,6 +99,9 @@ div{
 	text-decoration:none;
 	padding:20px;
 }
+.menuoptional .pseudolink:hover{
+	text-decoration:underline;
+}
 .maidisp{
 	position:absolute;
 	left:0px;
@@ -124,23 +129,22 @@ div{
 .selcircles div.active{
 	background-image:url("resources/circle_active.png");
 }
-#main{
-	padding:0px;
-	margin:0px;
-	position:absolute;
-	top: 215px;
-	left:0px;
-	width:100%;
-	height:30px;
-	
-}
-.mdec{
-	width=100px;
-	background-color:#AAAAAA;
-}
-.mdec.left{
-	background:linear-gradient(0deg,#FFFFFF,#AAAAAAA);
-}
+
 .pseudolink{
 	cursor:pointer;
+}
+#centerdisp{
+	position:absolute;
+	margin-left:-540px;
+	top:0px;
+	width:1000px;
+	left:50%;
+	background-color:white;
+	padding:20px 40px; 50px;
+	border-top-left-radius:0px;
+	border-top-right-radius:0px;
+	border-bottom-left-radius:40px;
+	border-bottom-right-radius:40px;
+	
+	box-shadow:0px 0px 10px 5px #555555;
 }
