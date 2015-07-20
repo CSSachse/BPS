@@ -7,6 +7,8 @@
 <!--links; technical shit-->
 <!--Font:open sans-->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<!--Site-wide stylesheet for convenience and cacheing-->
+<link rel="stylesheet" type="text/css" href="stylesheetmain.css"/>
 
 <!--Icon-->
 <link rel="icon" type="image/vnd.microsoft.icon" href="resources/favicon.ico" />
@@ -24,131 +26,12 @@
 
 <!--back to normal stuff-->
 <style type="text/CSS">
-body{
-	overflow-y:scroll;
-}
-div{
-	padding:0px;
-}
-#header{
-	position:absolute;
-	top:0px;
-	left:0px;
-	width:100%;
-	height:135px;
-	box-shadow:0px 3px 4px #888888;
-	font-family: 'Open Sans Condensed', Arial, sans-serif;
-	background-color:white;
-}
 #menu{
-	position:absolute;
 	top:135px;
-	left:0px;
-	width:100%;
-	height:50px;
-	font-family: 'Open Sans Condensed', Arial, sans-serif;
-	font-size:25px;
-	background-color:#333333;
-	background: -webkit-linear-gradient(#888888, #333333); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#888888, #333333); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#888888,#333333); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#888888,#333333); /* Standard syntax */
-}
-.menuoption{
-	display:inline;
-	position:relative;
-	top:6px;
-	color:rgb(25,25,25);
-	margin:0px;
-	padding:15px;
-	text-align:center;
-}
-.menuoption a:link{
-	color:rgb(25,25,25);
-	text-decoration:none;
-}
-.menuoption a:visited{
-	color:rgb(25,25,25);
-	text-decoration:none;
-}
-.menuoption a:hover{
-	color:rgb(250,215,30);
-	text-decoration:none;
-}
-.menuoption a:active{
-	color:rgb(250,215,30);
-	text-decoration:none;
-}
-.menuoption.active a{
-	color:rgb(250,215,30);
-}
-.social{
-	position:absolute;
-	left:700px;
-	bottom:20px;
-}
-
-.social img{
-	height:45px;
-	position:relative;
-	top:0px;
-}
-.social img:hover{
-	height:60px;
-	margin-right:-8px;
-	margin-left:-7px;
-	top:8px;
-	z-index:3;
-}
-.cur_underliner{
-	position:absolute;
-	left:0px;
-	top:10px;
-	height:4px;
-	width:100%;
-	background-color:rgb(250,215,30);
 }
 .menuoptional{
-	position:absolute;
 	top:185px;
-	left:0px;
-	height:30px;
-	width:100%;
-	backgroun-color:rgb(250,215,30);
-	background: -webkit-linear-gradient(rgb(230,195,10),rgb(250,215,30)); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(rgb(230,195,10),rgb(250,215,30)); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(rgb(230,195,10),rgb(250,215,30)); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(rgb(230,195,10),rgb(250,215,30)); /* Standard syntax */
-	visibility:hidden;
-	font-family: 'Open Sans Condensed', Arial, Helvetica, sans-serif;
-	font-size:16px;
-	text-align:center;
 }
-.menuoptional a{
-	position:relative;
-	top:4px;
-	color:black;
-	text-decoration:none;
-	padding:20px;
-}
-#main{
-	padding:0px;
-	margin:0px;
-	position:absolute;
-	top: 215px;
-	left:0px;
-	width:100%;
-	height:30px;
-	
-}
-.mdec{
-	width=100px;
-	background-color:#AAAAAA;
-}
-.mdec.left{
-	background:linear-gradient(0deg,#FFFFFF,#AAAAAAA);
-}
-
 </style>
 <script type="text/javascript">
 
@@ -214,49 +97,49 @@ function sdisplay(i){
 <div id="menu">
 	<div class="menuoption">
 	</div>
-	<div class="menuoption active" onmouseover="sdisplay(0);">
-		<a href="#">Home</a>
+	<div class="menuoption" onmouseover="sdisplay(0);">
+		<span class="pseudolink" onclick="window.location.href='#">Home</span>
+	</div>
+	<div class="menuoption active" onmouseover="sdisplay(1);">
+		<span class="pseudolink" onclick="window.location.href='#">About us</span>
 		<div class="cur_underliner"></div>
 	</div>
-	<div class="menuoption" onmouseover="sdisplay(1);">
-		<a href="#">About us</a>
-	</div>
 	<div class="menuoption" onmouseover="sdisplay(2);">
-		<a href="#">Procedures</a>
+		<span class="pseudolink" onclick="window.location.href='#">Procedures</span>
 	</div>
 	<div class="menuoption" onmouseover="sdisplay(3);">
-		<a href="#">Non-Surgical</a>
+		<span class="pseudolink" onclick="window.location.href='#';">Non-Surgical</span>
 	</div>
 	<div class="menuoption" onmouseover="sdisplay(4);">
-		<a href="#">Photos & Testimonials</a>
+		<span class="pseudolink" onclick="window.location.href='#">Photos & Testimonials</span>
 	</div>
 	<div class="menuoption" onmouseover="sdisplay(5);">
-		<a href="#">Contact Us!</a>
+		<span class="pseudolink" onclick="window.location.href='#">Contact Us!</span>
 	</div>
 </div>
 
 <div id="subdisp0" class="menuoptional" style="visibility:visible;"></div>
 <div id="subdisp1" class="menuoptional"><!-- -->
-	<a href="">Dr. Sachse, MD FACS</a>
-	<a href="">Martina Fici, cosmetician</a>
-	<a href="">Our staff</a>
-	<a href="">Office & Facilities</a>
+	<span class="pseudolink" onclick="window.location.href='aboutme.html';">Dr. Sachse, MD FACS</span>
+	<span class="pseudolink" onclick="window.location.href='';">Martina Fici, cosmetician</span>
+	<span class="pseudolink" onclick="window.location.href='';">Our staff</span>
+	<span class="pseudolink" onclick="window.location.href='';">Office & Facilities</span>
 </div>
-<div id="subdisp2" class="menuoptional"><!-- -->
-	<a href="">Abdominoplasty</a>
-	<a href="">Blepharoplasty</a>
-	<a href="">Breast augmentation</a>
-	<a href="">Breast reduction</a>
-	<a href="">Breast lift</a>
-	<a href="">Brachioplasty</a>
-	<a href="">Mohs surgery</a>
-	<a href="">Face lift</a>
-	<a href="">Liposuction</a>
-	<a href="">Otoplasty</a>
-	<a href="">Rhinoplasty</a>
+<div id="subdisp2" class="menuoptional"><!--Probably will have to filter this to account for smaller screents, add a "more-> section"-->
+	<span class="pseudolink" onclick="window.location.href='';">Abdominoplasty</span>
+	<span class="pseudolink" onclick="window.location.href='';">Blepharoplasty</span>
+	<span class="pseudolink" onclick="window.location.href='';">Breast augmentation</span>
+	<span class="pseudolink" onclick="window.location.href='';">Breast reduction</span>
+	<span class="pseudolink" onclick="window.location.href='';">Breast lift</span>
+	<span class="pseudolink" onclick="window.location.href='';">Brachioplasty</span>
+	<span class="pseudolink" onclick="window.location.href='';">Mohs surgery</span>
+	<span class="pseudolink" onclick="window.location.href='';">Face lift</span>
+	<span class="pseudolink" onclick="window.location.href='';">Liposuction</span>
+	<span class="pseudolink" onclick="window.location.href='';">Otoplasty</span>
+	<span class="pseudolink" onclick="window.location.href='';">Rhinoplasty</span>
 </div>
 <div id="subdisp3" class="menuoptional"><!-- -->
-	<a href=""></a>
+	<span class="pseudolink" onclick="window.location.href='';"></span>
 </div>
 <div id="subdisp4" class="menuoptional"><!-- -->
 	
