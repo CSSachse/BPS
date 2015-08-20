@@ -1,0 +1,99 @@
+<style type="text/CSS">
+#contactform{
+	text-align:center;
+}
+#emailaddr{
+
+}
+.topic{
+	width:0px;
+}
+.topic2{
+	visibility:hidden;
+	position:absolute;
+	top:6em;
+	left:0px;
+	width:100%;
+	text-align:center;
+}
+.topic.fsttopic:checked+label+.topic2{
+	visibility:visible;
+}
+.topic+label{
+	background-color:#cccccc;
+	background:linear-gradient(rgb(200,200,200),rgb(150,150,150));
+	padding:4px;
+	border-radius:3px;
+	cursor:pointer;
+}
+.topic:checked+label{
+	background-color:rgb(230,195,10);
+	background: linear-gradient(rgb(230,195,10),rgb(250,215,30));
+	box-shadow:inset 1px 1px 2px 0px #333333;
+}
+#message{
+	resize:none;
+	outline:none;
+	position:relative;
+	top:3em;
+}
+#submitbutton{
+	position:relative;
+	top:5em;
+}
+.toplabel{
+
+}
+</style>
+<form id="contactform" method="get" action="contactus.php">
+Email address: <input id="emailaddr" type="text" name="email" required="required"/>
+
+<br/>
+<br/>
+<br/>
+<input class="topic fsttopic" type="radio" name="fsttopic" id="general" value="general" required="required"/>
+<label for="general">General</label>
+<div class="topic2">
+	<input class="topic" type="radio" name="sndtopic" id="blah"/>
+		<label for="blah">blah</label>
+	<input class="topic" type="radio" name="sndtopic" value=""/>
+	<input class="topic" type="radio" name="sndtopic" value=""/>
+	<input class="topic" type="radio" name="sndtopic" value=""/>
+	<input class="topic" type="radio" name="sndtopic" value=""/>
+</div>
+
+<input class="topic fsttopic" type="radio" name="fsttopic" id="procedures" value="procedures"/>
+	<label for="procedures">Procedures</label>
+<div class="topic2">
+	<input class="topic" type="radio" name="sndtopic" value=""/>
+	<input class="topic" type="radio" name="sndtopic" value=""/>
+	<input class="topic" type="radio" name="sndtopic" value=""/>
+	<input class="topic" type="radio" name="sndtopic" value=""/>
+	<input class="topic" type="radio" name="sndtopic" value=""/>
+</div>
+
+<input class="topic fsttopic" type="radio" name="fsttopic" id="cosmetics" value="cosmetics"/>
+	<label for="cosmetics">Cosmetics</label>
+<div class="topic2">
+	<input class="topic" type="radio" name="sndtopic" value=""/>
+	<input class="topic" type="radio" name="sndtopic" value=""/>
+	<input class="topic" type="radio" name="sndtopic" value=""/>
+	<input class="topic" type="radio" name="sndtopic" value=""/>
+	<input class="topic" type="radio" name="sndtopic" value=""/>
+</div>
+
+<input class="topic fsttopic" type="radio" name="fsttopic" id="financing" value="financing"/>
+	<label for="financing">Financing</label>
+<div class="topic2">
+	<input class="topic" type="radio" name="sndtopic" value=""/>
+	<input class="topic" type="radio" name="sndtopic" value=""/>
+	<input class="topic" type="radio" name="sndtopic" value=""/>
+	<input class="topic" type="radio" name="sndtopic" value=""/>
+	<input class="topic" type="radio" name="sndtopic" value=""/>
+</div>
+
+<br/>
+<textarea id="message" rows="6" cols="60" name="message" required="required"></textarea>
+<br/>
+<input type="submit" id="submitbutton"/>
+</form>

@@ -1,5 +1,4 @@
 body{
-	overflow:hidden;
 	font-family:'Open-Sans', sans-serif;
 	padding:0px;
 }
@@ -29,6 +28,7 @@ div{
 	background: -o-linear-gradient(#888888, #333333); /* For Opera 11.1 to 12.0 */
 	background: -moz-linear-gradient(#888888,#333333); /* For Firefox 3.6 to 15 */
 	background: linear-gradient(#888888,#333333); /* Standard syntax */
+	z-index:5;
 }
 .menuoption{
 	display:inline;
@@ -39,11 +39,7 @@ div{
 	padding:15px;
 	text-align:center;
 }
-.menuoption .pseudolink:hover{
-	color:rgb(250,215,30);
-	text-decoration:none;
-}
-.menuoption .pseudolink:active{
+.menuoption:hover> .pseudolink{
 	color:rgb(250,215,30);
 	text-decoration:none;
 }
@@ -68,7 +64,8 @@ div{
 	top:8px;
 	z-index:3;
 }
-.cur_underliner{
+.menuoption.active::after{
+	content: " ";
 	position:absolute;
 	left:0px;
 	top:10px;
@@ -140,11 +137,52 @@ div{
 	width:1000px;
 	left:50%;
 	background-color:white;
-	padding:20px 40px; 50px;
+	padding:20px 40px 50px;
 	border-top-left-radius:0px;
 	border-top-right-radius:0px;
 	border-bottom-left-radius:40px;
 	border-bottom-right-radius:40px;
-	
-	box-shadow:0px 0px 10px 5px #555555;
+	box-shadow:0px 0px 10px 5px #333333;
+}
+#contactform{
+	text-align:center;
+}
+#emailaddr{
+
+}
+.topic{
+	width:0px;
+}
+.topic2{
+	visibility:hidden;
+	position:absolute;
+	top:6em;
+	left:0px;
+	width:100%;
+	text-align:center;
+}
+.topic.fsttopic:checked+label+.topic2{
+	visibility:visible;
+}
+.topic+label{
+	background-color:#cccccc;
+	background:linear-gradient(rgb(200,200,200),rgb(150,150,150));
+	padding:4px;
+	border-radius:3px;
+	cursor:pointer;
+}
+.topic:checked+label{
+	background-color:rgb(230,195,10);
+	background: linear-gradient(rgb(230,195,10),rgb(250,215,30));
+	box-shadow:inset 1px 1px 2px 0px #333333;
+}
+#message{
+	resize:none;
+	outline:none;
+	position:relative;
+	top:3em;
+}
+#submitbutton{
+	position:relative;
+	top:5em;
 }

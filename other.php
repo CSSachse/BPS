@@ -1,4 +1,10 @@
 <!DOCTYPE HTML>
+<?php
+$site=$_GET['site'];
+$topic=$_GET['topic'];
+$active=False;
+$rnum=0;
+?>
 <!-- Copyright Christoph Sachse June 2015. All rights reserved -->
 <html>
 <head>
@@ -35,31 +41,40 @@
   ga('send', 'pageview');
 </script>
 
-
 <!--back to normal stuff-->
 <style type="text/CSS">
 #menu{
-	box-shadow:0px -3px 4px #888888;/*only on main page*/
-	margin-bottom: 0px;
+	top:135px;
 }
-body{
-	overflow:hidden;
+.menuoptional{
+	top:185px;
+	box-shadow:0px 0px 2px 1px #333333;
+}
+#main{
+	padding:0px;
+	margin:0px;
+	position:absolute;
+	top: 215px;
+	left:0px;
+	width:100%;
+	height:auto;
+	-webkit-linear-gradient(90deg,#555555,#aaaaaa,#555555); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(90deg,#555555,#aaaaaa,#555555); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(90deg,#555555,#aaaaaa,#555555); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(90deg,#555555,#aaaaaa,#555555); /* Standard syntax */
+	background-color:#666666;
+	z-index:-3;
 }
 </style>
 <script type="text/javascript">
 
-var curmai=0;
-var num_slides=4;
-var repter;
-var scrwidth,scrheight;
 //ensure page dimensions fit the screen and look nice, begins main scroller, etc.
+var scrwidth,scrheight;
 function initpage(){
 	//get dimensions for later calculations
 	scrwidth = window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;
 	scrheight = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
-	
-	
-	repter=setTimeout("curmai=(curmai+1)%4;mupdate();",4000);
+	document.getElementById("main").style.height=Math.max(scrheight-215,document.getElementById("centerdisp").offsetHeight+40)+"px";
 }
 
 //show selection display
@@ -73,27 +88,6 @@ function sdisplay(i){
 	}
 	document.getElementById('subdisp'+i).style.visibility="visible";
 } 
-
-//show new slide in main/mai thingy
-function mupdate(){
-	//Temporary fix. Will ultimately add animation (fade or slide) once I can figure out how that works
-	for(j=0;j<curmai;j++){
-		document.getElementById("maidisp"+j).style.visibility="hidden";
-		document.getElementById("msel"+j).className="";
-	}
-	for(j=curmai+1;j<num_slides;j++){
-		document.getElementById("maidisp"+j).style.visibility="hidden";
-		document.getElementById("msel"+j).className="";
-	}
-	document.getElementById('maidisp'+curmai).style.visibility="visible";
-	document.getElementById("msel"+curmai).className="active";
-	curmai=(curmai+1)%4;
-	clearTimeout(repter);
-	repter=self.setTimeout("mupdate();",4000);
-}
-
-
-
 </script>
 </head>
 <body onload="initpage()">
@@ -108,30 +102,37 @@ function mupdate(){
 		<a href="https://www.linkedin.com/pub/rainer-sachse-md-facs/77/8aa/606"><img src="resources/linkedin.png" title="LinkedIn"/></a>
 	</div>
 </div>
+
 <div id="menu">
 	<div class="menuoption">
 	</div>
-	<div class="menuoption active" onmouseover="sdisplay(0);">
+	<div class="menuoption " onmouseover="sdisplay(0);">
 		<span class="pseudolink" onclick="window.location.href='http://www.drsachse.com';">Home</span>
 	</div>
-	<div class="menuoption" onmouseover="sdisplay(1);">
+	<?php if($site==="about"){$active="active";$rnum=1;}else{$active="";}
+		echo '<div class="menuoption '.$active.'" onmouseover="sdisplay(1);">'; ?>
 		<span class="pseudolink" onclick="window.location.href='http://www.drsachse.com/about';">About us</span>
 	</div>
-	<div class="menuoption" onmouseover="sdisplay(2);">
+	<?php if($site==="procedures"){$active="active";$rnum=2;}else{$active="";}
+		echo '<div class="menuoption '.$active.'" onmouseover="sdisplay(2);">'; ?>
 		<span class="pseudolink" onclick="window.location.href='http://www.drsachse.com/procedures';">Procedures</span>
 	</div>
-	<div class="menuoption" onmouseover="sdisplay(3);">
+	<?php if($site==="cosmetics"){$active="active";$rnum=3;}else{$active="";}
+		echo '<div class="menuoption '.$active.'" onmouseover="sdisplay(3);">'; ?>
 		<span class="pseudolink" onclick="window.location.href='http://www.drsachse.com/cosmetics';">Non-Surgical</span>
 	</div>
-	<div class="menuoption" onmouseover="sdisplay(4);">
+	<?php if($site==="testimonials"){$active="active";$rnum=4;}else{$active="";}
+	echo '<div class="menuoption '.$active.'" onmouseover="sdisplay(4);">'; ?>
 		<span class="pseudolink" onclick="window.location.href='http://www.drsachse.com/testimonials';">Photos & Testimonials</span>
 	</div>
-	<div class="menuoption" onmouseover="sdisplay(5);">
+	<?php if($site==="contact"){$active="active";$rnum=5;}else{$active="";}
+	echo '<div class="menuoption '.$active.'" onmouseover="sdisplay(5);">'; ?>
 		<span class="pseudolink" onclick="window.location.href='http://www.drsachse.com/contact';">Contact Us!</span>
 	</div>
 </div>
-<div id="subdisp0" class="menuoptional" style="visibility:visible;"></div>
-<div id="subdisp1" class="menuoptional"><!-- -->
+
+<div id="subdisp0" class="menuoptional"></div>
+<div id="subdisp1" class="menuoptional "><!-- -->
 	<span class="pseudolink" onclick="window.location.href='http://www.drsachse.com/about#drsachse';">Dr. Sachse, MD FACS</span>
 	<span class="pseudolink" onclick="window.location.href='http://www.drsachse.com/about#cosmetician';">Martina Fici, cosmetician</span>
 	<span class="pseudolink" onclick="window.location.href='http://www.drsachse.com/about#staff';">Our staff</span>
@@ -159,30 +160,34 @@ function mupdate(){
 <div id="subdisp5" class="menuoptional"><!-- -->
 </div>
 
-
+<!--JS/PHP selector for approbriate subdisp-->
+<script type="text/javascript">
+	sdisplay(<?php echo $rnum; ?>);
+</script>
 
 <div id="main">
-	<!--selection of slides which can take up main screen-->
-	<div id="maidisp0" class="maidisp" style="visibility:visible;">
-		<img src="resources/pro_img_1.jpg" style="float:right;z-index:-3;"/>
-	</div>
-	<div id="maidisp1" class="maidisp">
-		<img src="resources/pro_img_1.jpg" style="float:right;z-index:-3;"/>
-	</div>
-	<div id="maidisp2" class="maidisp">
-		<img src="resources/pro_img_1.jpg" style="float:right;z-index:-3;"/>
-	</div>
-	<div id="maidisp3" class="maidisp">
-		<img src="resources/pro_img_1.jpg" style="float:right;z-index:-3;"/>
-	</div>
-	<!--selection circles to choose current slide-->
-	<div class="selcircles">
-		<div id="msel0" onclick="curmai=0;mupdate();"class="active"> </div>
-		<div id="msel1" onclick="curmai=1;mupdate();"> </div>
-		<div id="msel2" onclick="curmai=2;mupdate();"> </div>
-		<div id="msel3" onclick="curmai=3;mupdate();"> </div>
-	</div>
+	<?php 
+	if($site==='location'){
+		include 'location.php';
+	}
+	else{
+		echo '<div id="centerdisp">';
+		if($site==='about'){
+			include 'about.php';
+		}else if($site==='contact'){
+			include 'contact.php';
+		}else if($site==='procedures'){
+			include 'procedures.php';
+		}else if($site==='cosmetics'){
+			include 'cosmetics.php';
+		}else if($site==='testimonials'){
+			include 'testimonials.php';
+		}else{
+			echo "Unfortunately, this site is not currently available. Go <a href='http://www.drsachse.com'>back</a>?";
+		}
+		echo "</div>";
+	}
+	?>
 </div>
-
 </body>
 </html>
